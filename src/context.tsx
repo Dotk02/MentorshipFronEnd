@@ -1,43 +1,3 @@
-// //copied from chatgtb
-
-// import React, { createContext, useContext, type ReactNode } from 'react';
-
-// interface ShopContextType {
-//   backendUrl: string;
-// }
-
-// const ShopContext = createContext<ShopContextType | undefined>(undefined);
-
-// interface ShopContextProviderProps {
-//   children: ReactNode;
-// }
-
-// const ShopContextProvider: React.FC<ShopContextProviderProps> = ({ children }) => {
-//   const backendUrl = "https://mentorshipapp-kq3n.onrender.com";
-
-//   const value: ShopContextType = {
-//     backendUrl,
-//   };
-
-//   return (
-//     <ShopContext.Provider value={value}>
-//       {children}
-//     </ShopContext.Provider>
-//   );
-// };
-
-// export const useShopContext = () => {
-//   const context = useContext(ShopContext);
-//   if (!context) {
-//     throw new Error("useShopContext must be used within a ShopContextProvider");
-//   }
-//   return context;
-// };
-
-// export default ShopContextProvider;
-
-// STOP HERE
-
 
 import React, {type ReactNode} from 'react'
 import { createContext, useContext } from 'react'
@@ -53,7 +13,7 @@ interface ShopContextProviderProps {
 }
 
 const ShopContextProvider:React.FC <ShopContextProviderProps> = (props)=> {
-     const backendUrl = "https://front-end-mntrshpapp.vercel.app"
+     const backendUrl = "https://mentorshipapp-1.onrender.com"
 
         const Value : ShopContextType = {
             backendUrl

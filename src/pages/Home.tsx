@@ -1,46 +1,37 @@
-// import React from 'react';
-// import mentor from '../assets/mentor.jpg';
-
-// function Home() {
-//   return (
-//     <>
-//     <div className="bg-cyan-500 min-h-screen flex flex-col items-center justify-center p-8">
-//       <h1 className="text-white font-bold text-3xl text-center mb-6">
-//         WELCOME TO MENTORSHIP WEBSITE
-//       </h1>
-
-
-//     </div>
-
-//     <div className='relative flex items-center'>
-//     <img className = 'object-cover w-full relative'src={mentor}></img>
-//     <h1></h1>
-//     </div>
-//     </>
-//   );
-// }
-
-// export default Home;
-
-
 
 
 import React from 'react';
-import { Link } from 'react-router-dom';
-import mentorImage from '../assets/mentor2.jpg'; // replace with your actual hero image
+import { Link, useNavigate } from 'react-router-dom';
+import mentorImage from '../assets/mentor2.jpg';
 import { FaUserTie, FaClock, FaCheckCircle, FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
 
 function Home() {
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    localStorage.removeItem("user");
+    navigate("/login");
+  };
+
   return (
     <div className="font-sans">
       {/* Header */}
       <header className="bg-teal-700 text-white flex items-center justify-between px-8 py-4">
         <h1 className="text-xl font-bold">Mentorship Platform</h1>
         <div className="flex gap-4">
-          <Link to="/profile" className="bg-white text-teal-700 px-4 py-2 rounded-md font-semibold hover:bg-gray-100">
+          <Link
+            to="/profile"
+            className="bg-white text-teal-700 px-4 py-2 rounded-md font-semibold hover:bg-gray-100"
+          >
             Profile
           </Link>
-          <button className="hover:underline">Logout</button>
+          <button
+            onClick={handleLogout}
+            className="hover:underline"
+          >
+            Logout
+          </button>
         </div>
       </header>
 
@@ -50,10 +41,10 @@ function Home() {
         style={{ backgroundImage: `url(${mentorImage})` }}
       >
         <h2 className="text-5xl font-bold mb-4">
-          Unlock Your <span className="text-cyan-300">Potential</span>
+          Step into <span className="text-cyan-300">Greatness</span>
         </h2>
         <p className="text-lg max-w-2xl mx-auto mb-6">
-          Connect with experienced mentors who can guide you on your journey to success. Whether you're starting your career or looking to grow, we have the right mentor for you.
+          Get matched with experienced mentors who will guide you every step of the way—whether you're just starting out or aiming to grow in your career.
         </p>
         <div className="flex justify-center gap-4">
           <Link to="/find-mentor" className="bg-cyan-600 hover:bg-cyan-700 px-6 py-3 rounded-md text-white font-semibold">
@@ -66,15 +57,15 @@ function Home() {
 
         <div className="flex justify-center gap-12 mt-10 text-xl font-semibold">
           <div>
-            <p>500+</p>
+            <p>120+</p>
             <span className="text-sm font-normal">Active Mentors</span>
           </div>
           <div>
-            <p>2000+</p>
+            <p>600+</p>
             <span className="text-sm font-normal">Successful Matches</span>
           </div>
           <div>
-            <p>95%</p>
+            <p>45%</p>
             <span className="text-sm font-normal">Satisfaction Rate</span>
           </div>
         </div>
@@ -82,9 +73,9 @@ function Home() {
 
       {/* Why Choose Section */}
       <section className="bg-white py-16 px-4 text-center">
-        <h3 className="text-3xl font-bold mb-4">Why Choose Our Platform?</h3>
+        <h3 className="text-3xl font-bold mb-4">What Makes Us Different.</h3>
         <p className="text-gray-600 mb-12 max-w-3xl mx-auto">
-          We provide the tools and connections you need to accelerate your growth and achieve your goals.
+          Find the support and inspiration you need to move forward with confidence..
         </p>
         <div className="flex flex-col md:flex-row justify-center gap-12 text-gray-800">
           <div className="flex flex-col items-center">
@@ -95,12 +86,12 @@ function Home() {
           <div className="flex flex-col items-center">
             <FaClock className="text-cyan-500 text-4xl mb-2" />
             <h4 className="font-bold text-lg mb-1">Flexible Scheduling</h4>
-            <p className="text-sm max-w-xs">Book sessions that fit your schedule with our flexible meeting options.</p>
+            <p className="text-sm max-w-xs">Enjoy the freedom to book mentorship sessions around your availability with our flexible scheduling system.</p>
           </div>
           <div className="flex flex-col items-center">
             <FaCheckCircle className="text-cyan-500 text-4xl mb-2" />
             <h4 className="font-bold text-lg mb-1">Proven Results</h4>
-            <p className="text-sm max-w-xs">Join thousands of mentees who have achieved their goals through our platform.</p>
+            <p className="text-sm max-w-xs">Thousands have already transformed their journeys with the help of our mentors — now it’s your turn.</p>
           </div>
         </div>
       </section>
@@ -111,7 +102,7 @@ function Home() {
           <div>
             <h4 className="font-bold text-lg mb-2">Mentorship Platform</h4>
             <p className="text-sm text-white/80">
-              Empowering individuals to reach their full potential through meaningful mentorship connections. Join thousands of successful mentees and mentors.
+              Helping individuals unlock their full potential by building powerful mentorship connections. Be part of a growing community of successful mentors and mentees.
             </p>
             <div className="flex gap-4 mt-4">
               <a href="#" className="hover:underline">Twitter</a>
@@ -133,7 +124,7 @@ function Home() {
           <div>
             <h4 className="font-bold text-lg mb-2">Contact Us</h4>
             <ul className="text-sm space-y-2">
-              <li className="flex items-center gap-2"><FaEnvelope /> davidadewale151@gmail.com</li>
+              <li className="flex items-center gap-2"><FaEnvelope /> soderukola@gmail.com</li>
               <li className="flex items-center gap-2"><FaPhone /> +234 813 588 0689</li>
               <li className="flex items-center gap-2"><FaMapMarkerAlt /> Nigeria</li>
             </ul>
@@ -145,3 +136,4 @@ function Home() {
 }
 
 export default Home;
+
