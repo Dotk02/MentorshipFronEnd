@@ -53,7 +53,7 @@ interface ShopContextProviderProps {
 }
 
 const ShopContextProvider:React.FC <ShopContextProviderProps> = (props)=> {
-     const backendUrl = "https://mentorshipapp-kq3n.onrender.com"
+     const backendUrl = "https://front-end-mntrshpapp.vercel.app"
 
         const Value : ShopContextType = {
             backendUrl

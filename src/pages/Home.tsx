@@ -1,117 +1,147 @@
-//  import React from 'react'
- 
-//  function Home() {
-//    return (
-//      <div>
-//        HOME PAGE
-//      </div>
-//    )
-//  }
- 
-//  export default Home
- 
-//import React from 'react';
+// import React from 'react';
+// import mentor from '../assets/mentor.jpg';
+
+// function Home() {
+//   return (
+//     <>
+//     <div className="bg-cyan-500 min-h-screen flex flex-col items-center justify-center p-8">
+//       <h1 className="text-white font-bold text-3xl text-center mb-6">
+//         WELCOME TO MENTORSHIP WEBSITE
+//       </h1>
+
+
+//     </div>
+
+//     <div className='relative flex items-center'>
+//     <img className = 'object-cover w-full relative'src={mentor}></img>
+//     <h1></h1>
+//     </div>
+//     </>
+//   );
+// }
+
+// export default Home;
+
+
+
+
+import React from 'react';
 import { Link } from 'react-router-dom';
+import mentorImage from '../assets/mentor2.jpg'; // replace with your actual hero image
+import { FaUserTie, FaClock, FaCheckCircle, FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
 
 function Home() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 px-4">
-      <h1 className="text-4xl font-bold text-blue-700 mb-4">Welcome to the Mentorship App</h1>
-      <p className="text-lg text-gray-700 mb-8 text-center max-w-xl">
-        This platform connects mentors and mentees to help grow skills, achieve goals, and build stronger futures together.
-      </p>
+    <div className="font-sans">
+      {/* Header */}
+      <header className="bg-teal-700 text-white flex items-center justify-between px-8 py-4">
+        <h1 className="text-xl font-bold">Mentorship Platform</h1>
+        <div className="flex gap-4">
+          <Link to="/profile" className="bg-white text-teal-700 px-4 py-2 rounded-md font-semibold hover:bg-gray-100">
+            Profile
+          </Link>
+          <button className="hover:underline">Logout</button>
+        </div>
+      </header>
 
-      <div className="space-x-4">
-        <Link
-          to="/login"
-          className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-md transition"
-        >
-          Login
-        </Link>
+      {/* Hero Section */}
+      <section
+        className="bg-cover bg-center text-white text-center py-24 px-4"
+        style={{ backgroundImage: `url(${mentorImage})` }}
+      >
+        <h2 className="text-5xl font-bold mb-4">
+          Unlock Your <span className="text-cyan-300">Potential</span>
+        </h2>
+        <p className="text-lg max-w-2xl mx-auto mb-6">
+          Connect with experienced mentors who can guide you on your journey to success. Whether you're starting your career or looking to grow, we have the right mentor for you.
+        </p>
+        <div className="flex justify-center gap-4">
+          <Link to="/find-mentor" className="bg-cyan-600 hover:bg-cyan-700 px-6 py-3 rounded-md text-white font-semibold">
+            Find a Mentor
+          </Link>
+          <Link to="/become-mentor" className="border border-white px-6 py-3 rounded-md text-white font-semibold hover:bg-white hover:text-cyan-700">
+            Become a Mentor
+          </Link>
+        </div>
 
-        <Link
-          to="/register"
-          className="bg-gray-200 hover:bg-gray-300 text-gray-800 px-6 py-2 rounded-md transition"
-        >
-          Register
-        </Link>
-      </div>
+        <div className="flex justify-center gap-12 mt-10 text-xl font-semibold">
+          <div>
+            <p>500+</p>
+            <span className="text-sm font-normal">Active Mentors</span>
+          </div>
+          <div>
+            <p>2000+</p>
+            <span className="text-sm font-normal">Successful Matches</span>
+          </div>
+          <div>
+            <p>95%</p>
+            <span className="text-sm font-normal">Satisfaction Rate</span>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Section */}
+      <section className="bg-white py-16 px-4 text-center">
+        <h3 className="text-3xl font-bold mb-4">Why Choose Our Platform?</h3>
+        <p className="text-gray-600 mb-12 max-w-3xl mx-auto">
+          We provide the tools and connections you need to accelerate your growth and achieve your goals.
+        </p>
+        <div className="flex flex-col md:flex-row justify-center gap-12 text-gray-800">
+          <div className="flex flex-col items-center">
+            <FaUserTie className="text-cyan-500 text-4xl mb-2" />
+            <h4 className="font-bold text-lg mb-1">Expert Mentors</h4>
+            <p className="text-sm max-w-xs">Connect with industry experts who have walked the path you want to take.</p>
+          </div>
+          <div className="flex flex-col items-center">
+            <FaClock className="text-cyan-500 text-4xl mb-2" />
+            <h4 className="font-bold text-lg mb-1">Flexible Scheduling</h4>
+            <p className="text-sm max-w-xs">Book sessions that fit your schedule with our flexible meeting options.</p>
+          </div>
+          <div className="flex flex-col items-center">
+            <FaCheckCircle className="text-cyan-500 text-4xl mb-2" />
+            <h4 className="font-bold text-lg mb-1">Proven Results</h4>
+            <p className="text-sm max-w-xs">Join thousands of mentees who have achieved their goals through our platform.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-gradient-to-br from-teal-700 to-blue-900 text-white py-10 px-6">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div>
+            <h4 className="font-bold text-lg mb-2">Mentorship Platform</h4>
+            <p className="text-sm text-white/80">
+              Empowering individuals to reach their full potential through meaningful mentorship connections. Join thousands of successful mentees and mentors.
+            </p>
+            <div className="flex gap-4 mt-4">
+              <a href="#" className="hover:underline">Twitter</a>
+              <a href="#" className="hover:underline">LinkedIn</a>
+            </div>
+          </div>
+
+          <div>
+            <h4 className="font-bold text-lg mb-2">Quick Links</h4>
+            <ul className="space-y-2 text-sm">
+              <li><Link to="/find-mentor">Find a Mentor</Link></li>
+              <li><Link to="/become-mentor">Become a Mentor</Link></li>
+              <li><Link to="/success-stories">Success Stories</Link></li>
+              <li><Link to="/resources">Resources</Link></li>
+              <li><Link to="/about">About Us</Link></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="font-bold text-lg mb-2">Contact Us</h4>
+            <ul className="text-sm space-y-2">
+              <li className="flex items-center gap-2"><FaEnvelope /> davidadewale151@gmail.com</li>
+              <li className="flex items-center gap-2"><FaPhone /> +234 813 588 0689</li>
+              <li className="flex items-center gap-2"><FaMapMarkerAlt /> Nigeria</li>
+            </ul>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
 
 export default Home;
-
-//ANOTHER HOME PAGE CODE
-
-// import React from 'react';
-// import { Link } from 'react-router-dom';
-
-// function Home() {
-//   return (
-//     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-white text-gray-800">
-//       {/* Navbar */}
-//       <header className="bg-white shadow-md fixed top-0 left-0 w-full z-10">
-//         <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-//           <h1 className="text-2xl font-bold text-blue-700">MentorshipApp</h1>
-//           <nav className="space-x-6">
-//             <Link to="/" className="text-gray-700 hover:text-blue-600 transition">Home</Link>
-//             <Link to="/login" className="text-gray-700 hover:text-blue-600 transition">Login</Link>
-//             <Link to="/register" className="text-gray-700 hover:text-blue-600 transition">Register</Link>
-//           </nav>
-//         </div>
-//       </header>
-
-//       {/* Hero Section */}
-//       <div className="flex flex-col items-center justify-center text-center px-4 py-32">
-//         <h2 className="text-5xl font-extrabold text-blue-700 leading-tight mb-4">
-//           Empowering Growth Through Mentorship
-//         </h2>
-//         <p className="text-lg text-gray-600 max-w-2xl mb-8">
-//           Find the right mentor, build valuable connections, and grow in your career, education, or life journey.
-//         </p>
-//         <div className="space-x-4">
-//           <Link
-//             to="/login"
-//             className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md text-lg transition"
-//           >
-//             Get Started
-//           </Link>
-//           <Link
-//             to="/register"
-//             className="bg-white border border-blue-600 text-blue-600 hover:bg-blue-50 px-6 py-3 rounded-md text-lg transition"
-//           >
-//             Join Now
-//           </Link>
-//         </div>
-//       </div>
-
-//       {/* Features Section */}
-//       <section className="py-16 px-4 bg-white">
-//         <h3 className="text-3xl font-bold text-center text-gray-800 mb-12">Why Choose Us?</h3>
-//         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto text-center">
-//           <div className="p-6 border rounded-lg shadow hover:shadow-lg transition">
-//             <h4 className="text-xl font-semibold text-blue-600 mb-2">Expert Mentors</h4>
-//             <p className="text-gray-600">Work with top-tier mentors across different fields and industries.</p>
-//           </div>
-//           <div className="p-6 border rounded-lg shadow hover:shadow-lg transition">
-//             <h4 className="text-xl font-semibold text-blue-600 mb-2">Goal-Focused Guidance</h4>
-//             <p className="text-gray-600">Stay focused and track your progress with goal-setting tools.</p>
-//           </div>
-//           <div className="p-6 border rounded-lg shadow hover:shadow-lg transition">
-//             <h4 className="text-xl font-semibold text-blue-600 mb-2">Community Support</h4>
-//             <p className="text-gray-600">Join a community that motivates and encourages you to grow.</p>
-//           </div>
-//         </div>
-//       </section>
-
-//       {/* Footer */}
-//       <footer className="text-center py-6 text-gray-500 text-sm border-t">
-//         © {new Date().getFullYear()} MentorshipApp. All rights reserved.
-//       </footer>
-//     </div>
-//   );
-// }
-
-// export default Home;
-   
