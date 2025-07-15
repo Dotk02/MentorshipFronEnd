@@ -1,7 +1,5 @@
-
-
-
 import { useEffect } from 'react';
+import sadepix from '../assets/sadeimg.jpeg';
 
 function Profile() {
   useEffect(() => {
@@ -9,10 +7,10 @@ function Profile() {
   }, []);
 
   const user = {
-    name: 'Jane Doe',
-    email: 'jane.doe@example.com',
+    name: 'Folasade Sonde',
+    email: 'folsade@gmail.com',
     role: 'Mentor',
-    avatar: 'https://i.pravatar.cc/150?img=5', // Placeholder image
+    avatar: sadepix, // ✅ correct image reference
   };
 
   return (
@@ -37,3 +35,5 @@ function Profile() {
 }
 
 export default Profile;
+
+
