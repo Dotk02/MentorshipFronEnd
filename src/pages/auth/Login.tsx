@@ -8,7 +8,7 @@ function Login() {
   const context = useShopContext();
 
   // Make sure backendUrl is correctly set in your context
-  const backendUrl = context?.backendUrl || "http://localhost:5000";
+  const backendUrl = context?.backendUrl || "https://https://mentorshipapp-1.onrender.com";
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
