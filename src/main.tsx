@@ -19,7 +19,7 @@ import ReactDOM from 'react-dom/client';
 import App from './App.tsx';
 import './index.css';
 import { BrowserRouter } from 'react-router-dom';
-import ShopContextProvider from './context'; // ✅ Make sure the path is correct
+import ShopContextProvider from './pages/context.tsx'; // ✅ Make sure the path is correct
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>

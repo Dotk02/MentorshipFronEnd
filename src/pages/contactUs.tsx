@@ -7,24 +7,24 @@ function ContactUs() {
   }, []);
 
   return (
-    <div>
+    <div className="min-h-screen bg-gray-50 flex flex-col">
       {/* Navbar */}
-      <nav className="bg-blue-800 text-white px-4 py-3 flex justify-between items-center shadow-md">
-        <div className="text-lg font-bold">Mentorship</div>
+      <nav className="bg-blue-800 text-white px-4 py-3 flex justify-between items-center shadow-md sticky top-0 z-50">
+        <div className="text-xl font-bold">Mentorship</div>
         <div className="space-x-4">
           <Link to="/" className="hover:underline">Home</Link>
           <Link to="/about" className="hover:underline">About</Link>
-          <Link to="/contact" className="hover:underline">Contact</Link>
+          <Link to="/contactus" className="hover:underline">Contact</Link>
         </div>
       </nav>
 
-      {/* Contact Form */}
-      <div className="min-h-screen bg-gray-50 py-10 px-4">
-        <h1 className="text-3xl font-bold text-center text-blue-800 mb-8">Contact Us</h1>
-        <div className="max-w-xl mx-auto bg-white shadow-lg rounded-lg p-6">
+      {/* Contact Form Section */}
+      <div className="flex justify-center items-center flex-grow px-6 py-10">
+        <div className="w-full max-w-md bg-white shadow-md rounded-lg p-6">
+          <h1 className="text-3xl font-bold text-blue-800 mb-6 text-center">Contact Us</h1>
           <form>
             <div className="mb-4">
-              <label className="block text-gray-700 font-semibold mb-2">Name</label>
+              <label className="block text-gray-700 font-semibold mb-1">Name</label>
               <input
                 type="text"
                 placeholder="Your name"
@@ -32,7 +32,7 @@ function ContactUs() {
               />
             </div>
             <div className="mb-4">
-              <label className="block text-gray-700 font-semibold mb-2">Email</label>
+              <label className="block text-gray-700 font-semibold mb-1">Email</label>
               <input
                 type="email"
                 placeholder="Your email"
@@ -40,7 +40,7 @@ function ContactUs() {
               />
             </div>
             <div className="mb-4">
-              <label className="block text-gray-700 font-semibold mb-2">Message</label>
+              <label className="block text-gray-700 font-semibold mb-1">Message</label>
               <textarea
                 rows={4}
                 placeholder="Your message"

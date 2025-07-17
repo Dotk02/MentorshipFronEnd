@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import { useShopContext } from '../context';
+import { useShopContext } from './context';
 
 function Register() {
   const navigate = useNavigate();

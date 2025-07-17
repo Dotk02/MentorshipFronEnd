@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import { useShopContext } from '../../context'; // ✅ Adjust to your actual path
+import { useShopContext } from '../context'; // ✅ Adjust to your actual path
 
 function Login() {
   const navigate = useNavigate();

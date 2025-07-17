@@ -1,7 +1,6 @@
-
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import mentor from '../assets/mentor.jpg'; // Adjust if your image path is different
+import mentor from '../assets/mentor.jpg';
 
 function BecomeMentor() {
   const navigate = useNavigate();
@@ -12,11 +11,16 @@ function BecomeMentor() {
     bio: ''
   });
 
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+  // Handle input changes
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  // Handle form submission
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log('Form submitted:', formData);
     alert('Thank you for applying!');
@@ -32,16 +36,16 @@ function BecomeMentor() {
           <ul className="flex space-x-4">
             <li><Link to="/" className="hover:text-gray-200">Home</Link></li>
             <li><Link to="/about" className="hover:text-gray-200">About Us</Link></li>
-            <li><Link to="/contact" className="hover:text-gray-200">Contact Us</Link></li>
+            <li><Link to="/contactUs" className="hover:text-gray-200">Contact Us</Link></li>
           </ul>
         </div>
       </nav>
 
       {/* Main Section */}
-      <div className="min-h-screen flex flex-col lg:flex-row bg-gray-100 pt-20">
+      <div className="min-h-screen flex flex-col lg:flex-row bg-gray-100 pt-24">
         {/* Form Section */}
         <div className="w-full lg:w-1/2 bg-white px-4 py-8 lg:px-12 shadow-lg flex items-center justify-center">
-          <div className="w-full max-w-md"> {/* reduced width */}
+          <div className="w-full max-w-md">
             <h2 className="text-3xl font-bold text-blue-800 mb-2 text-center">Become a Mentor</h2>
             <p className="text-gray-600 mb-6 text-center">Share your experience and guide others.</p>
 
@@ -89,7 +93,7 @@ function BecomeMentor() {
                   value={formData.bio}
                   onChange={handleChange}
                   required
-                  rows="4"
+                  rows={4}
                   className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring focus:ring-blue-300 resize-none"
                 />
               </div>

@@ -1,38 +1,5 @@
-// import React from 'react';
-// import { Link } from 'react-router-dom';
 
-// function Mentor() {
-//   return (
-//     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-blue-100 flex items-center justify-center px-4">
-//       <div className="bg-white shadow-lg rounded-lg p-10 max-w-xl w-full text-center">
-//         <h1 className="text-4xl font-bold text-blue-700 mb-4">🎉 Welcome, Mentor!</h1>
-//         <p className="text-gray-700 text-lg mb-6">
-//           Thank you for signing up to guide and empower others through mentorship. You’re now part of a life-changing movement!
-//         </p>
-
-//         <div className="flex justify-center gap-4 mt-6">
-//           <Link
-//             to="/home"
-//             className="bg-blue-600 text-white px-5 py-2 rounded hover:bg-blue-700 transition"
-//           >
-//             Go to Dashboard
-//           </Link>
-//           <Link
-//             to="/find-mentor"
-//             className="border border-blue-600 text-blue-600 px-5 py-2 rounded hover:bg-blue-50 transition"
-//           >
-//             Explore Mentors
-//           </Link>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default Mentor;
-
-
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 function Mentor() {
