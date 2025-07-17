@@ -41,7 +41,7 @@ function About() {
           <nav className="hidden md:flex gap-6 items-center">
             <Link to="/" className="hover:underline">Home</Link>
             <Link to="/about" className="hover:underline">About Us</Link>
-            <Link to="/contact" className="hover:underline">Contact</Link>
+            <Link to="/contactus" className="hover:underline">Contact</Link>
 
             {isLoggedIn ? (
               <button

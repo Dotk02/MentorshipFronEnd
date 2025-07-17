@@ -43,7 +43,8 @@ import FindMentor from './pages/FindMentor';
 import BecomeMentor from './pages/BecomeMentor';
 import About from './pages/About';
 import Mentor from './pages/Mentor'; 
-import ContactUs from './pages/ContactUs'; 
+import ContactUs from './pages/ContactUs';
+ 
 
 function App() {
   return (
@@ -54,7 +55,7 @@ function App() {
       <Route path="/register" element={<Register />} />
       <Route path="/profile" element={<Profile />} />
       <Route path="/resources" element={<Resources />} />
-      <Route path="/ContactUs" element={<ContactUs />} /> 
+      <Route path="/contactus" element={<ContactUs />} /> 
       <Route path="/success-stories" element={<SuccessStories />} />
       <Route path="/find-mentor" element={<FindMentor />} />
       <Route path="/become-mentor" element={<BecomeMentor />} />
