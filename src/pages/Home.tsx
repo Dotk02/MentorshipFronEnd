@@ -48,7 +48,7 @@ function Home() {
           <nav className="hidden md:flex gap-6 items-center">
             <Link to="/" className="hover:underline">Home</Link>
             <Link to="/about" className="hover:underline">About Us</Link>
-            <Link to="/contact" className="hover:underline">Contact</Link>
+            <Link to="/contactus" className="hover:underline">Contact</Link>
 
             {isLoggedIn ? (
               <button
@@ -73,7 +73,7 @@ function Home() {
           <div className="md:hidden px-4 pb-4 space-y-2 bg-teal-800">
             <Link to="/" onClick={() => setMenuOpen(false)} className="block">Home</Link>
             <Link to="/about" onClick={() => setMenuOpen(false)} className="block">About Us</Link>
-            <Link to="/contact" onClick={() => setMenuOpen(false)} className="block">Contact</Link>
+            <li><Link to="/contactus" className="hover:text-gray-200">Contact</Link></li>
             {isLoggedIn ? (
               <button
                 onClick={() => {
