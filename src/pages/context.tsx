@@ -15,7 +15,7 @@ interface ShopContextProviderProps {
 }
 
 const ShopContextProvider: React.FC<ShopContextProviderProps> = ({ children }) => {
-  const backendUrl = import.meta.env.VITE_BACKEND_URL || 'http://localhost:5000';
+  const backendUrl = import.meta.env.VITE_BACKEND_URL || "https://mentorshipapp-1.onrender.com";
 
   const value: ShopContextType = {
     backendUrl,
